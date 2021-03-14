@@ -54,9 +54,9 @@ class Mail
                 $secure = 'starttls';
                 $port = 587;
             } else if (stripos($username, '@coolapk.tk') !== false) {
-                $host = 'outlook.office365.com';
-                $secure = 'tls';
-                $port = 993;
+                $host = 'smtp.office365.com';
+                $secure = 'starttls';
+                $port = 587;
             } else {
                 throw new \Exception('不受支持的邮箱。目前仅支持谷歌邮箱、QQ邮箱以及163邮箱，推荐使用谷歌邮箱。');
             }
